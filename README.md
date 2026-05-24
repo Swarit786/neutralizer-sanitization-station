@@ -148,6 +148,24 @@ Evaluated by a jury panel on design creativity, problem-solving approach, and CA
 
 ---
 
+## Design Inspiration & References
+
+### Pneumatic Glove Dispensers
+The air-assisted glove mechanism draws inspiration from established pneumatic glove dispensers widely used in healthcare and laboratory settings. These devices use controlled airflow to keep gloves open and ready for hands-free insertion, eliminating a key contact point in hygiene workflows.
+
+**Reference:** AeroGlove® Automatic Glove Dispenser — https://www.briancummins.com.au/AEROGLOVDISPBATT/
+
+### UV-C Surface Sanitization
+UV-C light exposure is a proven technology for reducing surface contamination on high-touch items. Hospitals, airports, and laboratories deploy UV-C sanitization cabinets for personal protective equipment, phones, and bags.
+
+**References:**
+- WHO guidance on surface decontamination: https://www.who.int/news-room/q-a-detail/coronavirus-disease-covid-19-surface-contamination
+- UV-C disinfection in healthcare: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7428803/ (Journal of Hospital Infection)
+- Airport UV-C screening systems (deployed 2020-2021): Industry practice during COVID-19 pandemic
+
+### Temperature Screening
+Infrared non-contact thermometers and thermal screening have become standard at institutional entry points for early fever detection.
+
 ## Disclaimer
 
 This project is an academic CAD concept developed during a student hackathon in 2020. It has not been prototyped, tested, or validated as a medical or safety device. UV-C sanitization, temperature screening, and disinfectant spray mechanisms are design concepts based on existing technologies. Real-world implementation would require engineering validation, regulatory review, and safety testing.
