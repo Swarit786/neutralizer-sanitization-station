@@ -17,6 +17,8 @@ The project was developed entirely in Fusion 360 as a full 3D CAD assembly. All 
 
 > **Note:** This is an academic CAD concept project, not a tested or certified medical device. Sanitization claims are design intentions based on known technologies. Effectiveness depends on implementation, calibration, and real-world testing.
 
+![Full model isometric view](images/full_model.png)
+
 ---
 
 ## Design Goals
@@ -29,62 +31,78 @@ The project was developed entirely in Fusion 360 as a full 3D CAD assembly. All 
 
 ---
 
+## User Flow
+
+The diagram below shows the intended step-by-step process a user follows when interacting with the Neutralizer at a university entry point.
+
+```mermaid
+flowchart TD
+    A[User arrives at entry point] --> B[Place personal items in side tray<br/>Phone, watch, spectacles]
+    B --> C[Place bag in lower UV-C chamber<br/>Door closes for exposure cycle]
+    C --> D[Body temperature check<br/>IR sensor reads display]
+    D --> E{Temperature within<br/>normal range?}
+    E -->|No| F[Alert<br/>Entry denied]
+    E -->|Yes| G[Disinfectant spray activation<br/>Side nozzle sprays hands and body]
+    G --> H[Air-assisted glove dispenser<br/>Air inflates glove for hands-free pickup]
+    H --> I[Retrieve personal items and bag<br/>UV-C cycle complete, door opens]
+    I --> J[User enters premises<br/>Sanitization process complete]
+
+    style A fill:#D3D1C7,stroke:#5F5E5A,color:#2C2C2A
+    style J fill:#D3D1C7,stroke:#5F5E5A,color:#2C2C2A
+    style D fill:#FAC775,stroke:#854F0B,color:#412402
+    style E fill:#FAC775,stroke:#854F0B,color:#412402
+    style F fill:#F7C1C1,stroke:#A32D2D,color:#501313
+    style B fill:#9FE1CB,stroke:#0F6E56,color:#04342C
+    style C fill:#9FE1CB,stroke:#0F6E56,color:#04342C
+    style G fill:#9FE1CB,stroke:#0F6E56,color:#04342C
+    style H fill:#9FE1CB,stroke:#0F6E56,color:#04342C
+    style I fill:#9FE1CB,stroke:#0F6E56,color:#04342C
+```
+
+---
+
 ## System Components
 
 ### 1. Air-Assisted Glove Dispenser (Top Module)
+
 Two glove dispenser units sit on the top surface of the station. The mechanism is inspired by pneumatic glove dispensers (AeroGlove-style): a controlled airflow inflates the glove cuff, holding it open so the user can insert their hand without touching the dispenser housing. This removes one of the most common contact points in glove dispensing workflows.
 
-![Glove dispenser unit](images/Gloves_dispenser_Body.png)
+![Glove dispenser unit](images/gloves_dispenser.png)
 
 ### 2. Disinfectant Spray Nozzle (Side-Mounted)
+
 A curved nozzle on the side face of the station is connected to an internal liquid sanitizer tank with a fill cap (visible from the top section). The nozzle directs disinfectant spray toward the user for hand and body surface sanitization. The tank is accessible for refilling from the top.
 
-![Front and nozzle view](images/front.png)
+![Front and nozzle view](images/front_nozzle.png)
 
 ### 3. Temperature Display Panel (Front Face)
+
 The front panel includes a sensor readout showing body temperature (shown as 97.5 °F in the model). This was conceptualised as an infrared proximity temperature check at the point of interaction — an early screening step before the user proceeds through the sanitization sequence.
 
 ### 4. Side Tray / Personal Item Holder
+
 A slatted basket tray extends from the side of the unit. Users place small personal items — phone, watch, spectacles — into the tray while the sanitization process takes place, keeping them separate and accessible without requiring the user to set them on an uncontrolled surface.
 
 ![Side tray extended](images/tray.png)
 
 ### 5. UV-C Sanitization Chamber (Lower Compartment)
+
 The lower enclosed section of the Neutralizer is designed as a UV-C exposure chamber for external bag surfaces. A hinged door allows bags and larger personal items to be placed inside. The chamber is intended to reduce surface contamination on external bag surfaces through UV-C light exposure.
 
-![UV-C chamber door open](images/for_bag.png)
-![Chamber interior view](images/bag_2.png)
+![UV-C chamber door open](images/uvc_chamber_open.png)
+![Chamber interior view](images/uvc_chamber_interior.png)
 
 > **Design note on UV-C:** UV-C sanitization effectiveness depends on several factors — line-of-sight exposure, lamp intensity, exposure duration, and surface geometry. Bags with folds, pockets, or irregular surfaces may have shadowed areas that receive limited or no UV-C exposure. This design is a concept intended to reduce surface contamination on reachable external surfaces, not a guarantee of full sterility. Proper implementation would require calibrated lamp placement, timed exposure cycles, and safety shielding for the user.
 
 ### 6. Sanitizer Liquid Tank (Internal)
+
 Visible in the top-down section view, the internal tank holds the disinfectant liquid and feeds the side spray nozzle via an internal pipe. A yellow-capped fill port is accessible from the top surface for maintenance and refilling.
 
-![Tank interior top view](images/tank_for_sanitizer_liquid.png)
+![Tank interior top view](images/tank_sanitizer.png)
 
 ### 7. Mobile Wheeled Base
+
 The entire unit sits on a four-caster wheeled platform, allowing the station to be repositioned across entry points without disassembly. The base includes a structural frame to support the unit's full weight including the internal tank when filled.
-
-![Full model isometric view](images/full_model.png)
-
----
-
-## User Flow
-
-The diagram below shows the intended step-by-step process a user follows when interacting with the Neutralizer at a university entry point.
-
-> *(See flowchart in portfolio / project documentation)*
-
-**Summary sequence:**
-1. User approaches the Neutralizer station
-2. Personal items (phone, watch, spectacles) placed in side tray
-3. Bag placed inside lower UV-C chamber — door closes
-4. Infrared temperature check displays reading
-5. If temperature is within normal range → proceed
-6. Disinfectant spray nozzle activates for hand and body sanitization
-7. Air-assisted glove dispenser offers hands-free glove pick-up
-8. UV-C cycle completes → door opens, bag retrieved
-9. User collects items from tray and proceeds into premises
 
 ---
 
@@ -127,15 +145,6 @@ The Fusion 360 assembly consists of the following key bodies and components:
 🥈 **2nd Place — Autodesk Student Hackathon (2020)**  
 Evaluated by a jury panel on design creativity, problem-solving approach, and CAD execution.  
 *(Certificate of achievement awarded)*
-
----
-
-## Files
-
-| File | Description |
-|---|---|
-| `glove_body_dispenser.step` | STEP export of the glove dispenser module |
-| `images/` | Rendered views of all major subsystems |
 
 ---
 
