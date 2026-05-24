@@ -166,6 +166,8 @@ UV-C light exposure is a proven technology for reducing surface contamination on
 ### Temperature Screening
 Infrared non-contact thermometers and thermal screening have become standard at institutional entry points for early fever detection.
 
+---
+
 ## Disclaimer
 
 This project is an academic CAD concept developed during a student hackathon in 2020. It has not been prototyped, tested, or validated as a medical or safety device. UV-C sanitization, temperature screening, and disinfectant spray mechanisms are design concepts based on existing technologies. Real-world implementation would require engineering validation, regulatory review, and safety testing.
